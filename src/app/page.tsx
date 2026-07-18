@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Check, Code2, Copy, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Check, Code2, Copy, Mail, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
