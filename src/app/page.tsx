@@ -166,9 +166,6 @@ export default function Home() {
       <footer className="footer page-frame">
         <Image className="brand-logo footer-logo" src="/logo.png" alt="" width={28} height={28} />
         <p>Malaysia. Working worldwide.</p>
-        <div className="footer-links">
-          <Link href="https://www.linkedin.com/company/nolan-innovation" target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" /> LinkedIn</Link>
-        </div>
       </footer>
 
       <div className="sr-status" role="status" aria-live="polite">
