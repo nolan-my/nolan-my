@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Check, Code2, Copy, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Check, Copy, Mail, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,15 +14,6 @@ const projects = [
     description: "A short-form revision space that helps SPM students learn at their own rhythm.",
     href: "https://www.trylah.my",
     cta: "Visit Try Lah",
-    mark: "trylah",
-  },
-  {
-    type: "Open source",
-    title: "Next Passkey WebAuthn",
-    description: "A lightweight toolkit that makes passwordless sign-in simpler to build in Next.js.",
-    href: "https://github.com/shaoxuan0916/next-passkey-webauthn",
-    cta: "View on GitHub",
-    mark: "passkey",
   },
 ] as const;
 
@@ -100,12 +91,8 @@ export default function Home() {
             {projects.map((project) => (
               <article key={project.title} className="project page-frame reveal-on-scroll">
                 <div className="project-meta">
-                  <span className={`project-mark project-mark-${project.mark}`} aria-hidden="true">
-                    {project.mark === "trylah" ? (
-                      <Image src="/trylah-logo.png" alt="" width={28} height={28} />
-                    ) : (
-                      <Code2 />
-                    )}
+                  <span className="project-mark" aria-hidden="true">
+                    <Image src="/trylah-logo.png" alt="" width={28} height={28} />
                   </span>
                   <span>{project.type}</span>
                 </div>

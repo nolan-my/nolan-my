@@ -10,7 +10,7 @@ Entrepreneurs, startups, businesses, venture capital firms, and angel investors 
 
 ## Product Purpose
 
-Establish Nolan Innovation as a credible software studio, present its current products and open-source work clearly, and make direct contact easy. Success means visitors quickly understand what the studio builds, inspect Try Lah and Next Passkey WebAuthn, and initiate a conversation.
+Establish Nolan Innovation as a credible software studio, present Try Lah clearly, and make direct contact easy. Success means visitors quickly understand what the studio builds, inspect Try Lah, and initiate a conversation.
 
 ## Brand Personality
 

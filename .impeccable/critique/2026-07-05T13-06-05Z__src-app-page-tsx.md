@@ -44,7 +44,7 @@ This looks like a clean template, not a high-end studio with a point of view. Th
 
 ### [P1] Work does not prove the brand claim
 
-**Why it matters:** Buyers and investors cannot tell whether Try Lah and Next Passkey WebAuthn are owned products, client work, experiments, or open source. There is no role, constraint, outcome, traction, date, or technical evidence.
+**Why it matters:** Buyers and investors cannot tell whether Try Lah is an owned product, client work, or experiment. There is no role, constraint, outcome, traction, date, or technical evidence.
 
 **Fix:** Turn each project into an on-page evidence block with one decisive visual and a factual mini-case: problem, Nolan's role, and result. Keep outbound links secondary.
 
@@ -90,7 +90,7 @@ This looks like a clean template, not a high-end studio with a point of view. Th
 
 **Casey, mobile visitor:** The mobile header removes Work, the hero delays evidence, and primary proof requires opening external tabs on a potentially slow connection. Negative-margin project descriptions are fragile under longer text or localization.
 
-**Investor or client evaluator:** Two unlabeled projects, no outcomes, no traction, no operator identity, no ownership labels, no engagement model, and no institutional reassurance make capability difficult to assess.
+**Investor or client evaluator:** One unlabeled project, no outcomes, no traction, no operator identity, no ownership label, no engagement model, and no institutional reassurance make capability difficult to assess.
 
 ## Minor Observations
 
