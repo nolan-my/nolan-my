@@ -23,7 +23,6 @@ const services = [
   ["Digital products", "Ideas refined, built, and carried into production."],
 ] as const;
 
-// TODO: remove this comment message later
 export default function Home() {
   const [copyState, setCopyState] = useState<CopyState>("idle");
   const resetTimer = useRef<number | null>(null);
