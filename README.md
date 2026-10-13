@@ -7,7 +7,6 @@ The website for Nolan Innovation, a software studio building custom software, we
 - Next.js 16 with the App Router
 - React 19 and TypeScript
 - Tailwind CSS 4
-- Framer Motion
 - Lucide React
 
 ## Getting started
@@ -34,5 +33,9 @@ bun run lint # Run ESLint
 
 ```text
 src/app/       App Router pages, layout, and global styles
-public/        Static images and brand assets
+public/        Try Lah identity and showcase assets
 ```
+
+Use Bun and commit dependency changes with `bun.lock`.
+
+The approved visual direction is documented in [DESIGN.md](DESIGN.md). Showcase image sources are recorded in [public/work/SOURCES.md](public/work/SOURCES.md); the font license is in `src/app/fonts/OFL.txt`.

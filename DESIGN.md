@@ -1,42 +1,39 @@
-# Design System
+# Nolan Innovation design
 
-## Direction
+The approved direction is Ink & Cobalt: a light-only software studio website for founders and businesses. Show real shipped work, keep the offer concise, and make contacting Nolan straightforward.
 
-Quiet confidence with work as the visual peak. The interface uses Apple-like product clarity but avoids imitation through evidence-led layouts, large project typography, and a dark proof section rather than decorative effects.
+## Color and typography
 
-## Color
+`src/app/globals.css` is the source of truth for design tokens.
 
-- Strategy: restrained
-- Paper: `oklch(98.2% 0.004 250)`
-- Surface: `oklch(94.8% 0.008 250)`
-- Ink: `oklch(19% 0.014 250)`
-- Muted: `oklch(45% 0.016 250)`
-- Line: `oklch(86% 0.01 250)`
-- Action blue: `oklch(55% 0.2 252)`
-- Proof section: `oklch(17% 0.014 250)`
+| Role | Color |
+| --- | --- |
+| Page / text / supporting text | `#f6f7fa` / `#172033` / `#5b6475` |
+| Rules / cobalt accent | `#d9dfeb` / `#3458c5` |
+| Project surface / text / supporting text | `#e5ebf7` / `#24365b` / `#52627f` |
+| Contact surface / text / supporting text | `#17243d` / `#f0f3fa` / `#b9c5db` |
+| Contact rules | `#425371` |
 
-## Typography
+Use self-hosted Manrope throughout. Medium-weight display text and compact supporting copy establish hierarchy. Keep tracking at or above -0.04em. The font and its OFL license live in `src/app/fonts/`.
 
-Use the native platform system sans stack. Display text uses tight tracking and strong weight contrast. Body copy stays between 45 and 70 characters per line.
+The page always uses light mode, including when the operating system prefers dark mode. The deep-ink contact section is part of the fixed palette.
 
 ## Layout
 
-- Maximum content width: 76rem
-- Fluid horizontal gutter: 1rem to 3rem
-- Sections alternate between open light space and the dark proof field
-- Avoid card grids; use rules, spacing, and typography for grouping
+- Center content in an 80rem frame with fluid gutters.
+- Use the text-only Nolan wordmark in both header and footer; retain the branded `favicon.ico`.
+- Keep the hero compact so the Try Lah showcase begins within the desktop viewport.
+- Show the two existing Try Lah screenshots inside licensed iPhone 18 Pro frames. Asset provenance is in `public/work/SOURCES.md`.
+- Stack main sections on mobile while keeping navigation visible and the product screens side by side.
+- Use breakpoints at 900px, 600px, and 360px. Controls have 7px corners; the product stage has 16px corners.
+- Reserve shadows for device imagery. Use spacing and fine rules for services and contact.
 
-## Motion
+## Content and interaction
 
-- One hero entrance and a quiet brand signal line on load
-- Native scroll-driven reveals for major content groups where supported
-- Static content as the fallback
-- Expo easing for interaction feedback
-- Respect `prefers-reduced-motion`
+The page flows from the offer to Try Lah, three services, then WhatsApp and email contact. The Try Lah count of “20,000 active users and counting” was supplied by the company on 2026-10-13.
 
-## Components
+Keep content visible on load. Native smooth section scrolling respects reduced motion. Feedback is limited to short, 160ms interactions; avoid entrance animations and scroll reveals.
 
-- Pill buttons are reserved for primary actions
-- Text links use a directional arrow and action blue
-- Project rows balance title, one-line description, and a clear destination
-- Every interactive element has visible focus, active, and touch-safe states
+Maintain visible keyboard focus, the skip link, at least 44px touch targets, external-link announcements, and copy-email success/error feedback. Keep the email link available when clipboard access fails.
+
+Avoid decorative gradients, repetitive card grids, generic slogans, invented claims, and excessive copy. Development screenshots and review reports are temporary files and should not be committed.
