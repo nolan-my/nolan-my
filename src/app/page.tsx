@@ -16,6 +16,18 @@ const services = [
 export default function Home() {
   const [copyState, setCopyState] = useState<CopyState>("idle");
   const resetTimer = useRef<number | null>(null);
+  const headerMarker = useRef<HTMLDivElement>(null);
+  const [compactHeader, setCompactHeader] = useState(false);
+
+  useEffect(() => {
+    const marker = headerMarker.current;
+    if (!marker) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setCompactHeader(!entry.isIntersecting);
+    });
+    observer.observe(marker);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => () => {
     if (resetTimer.current) window.clearTimeout(resetTimer.current);
@@ -37,24 +49,23 @@ export default function Home() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <header className="site-header page-frame" id="top">
-        <a href="#top" className="wordmark" aria-label="Nolan Innovation home">
-          nolan<span>innovation</span>
-        </a>
-        <nav className="navigation" aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#contact" className="nav-contact">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></a>
-        </nav>
+      <div id="top" className="header-marker" ref={headerMarker} aria-hidden="true" />
+      <header className="site-header" data-compact={compactHeader}>
+        <div className="header-inner page-frame">
+          <a href="#top" className="wordmark" aria-label="Nolan Innovation home">
+            nolan<span>innovation</span>
+          </a>
+          <nav className="navigation" aria-label="Primary navigation">
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#contact" className="nav-contact">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></a>
+          </nav>
+        </div>
       </header>
 
       <main id="main">
         <section className="hero page-frame" aria-labelledby="hero-title">
           <h1 id="hero-title">Your idea deserves<br /><span>to be built.</span></h1>
-          <div className="hero-intro">
-            <p>An app you wish existed. A better way to run your business. We help you design it, build it, and get it out into the world.</p>
-            <a href="#contact" className="button button-dark">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></a>
-          </div>
         </section>
 
         <section id="work" className="page-frame" aria-labelledby="work-title">
@@ -80,7 +91,7 @@ export default function Home() {
                     alt="Try Lah dashboard with a daily quiz streak, subjects, and practice activities"
                     width={778}
                     height={1688}
-                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 30vw, 260px"
+                    unoptimized // Preserve fine UI text in the original lossless screenshot.
                     className="product-screen"
                     preload
                   />
@@ -94,7 +105,7 @@ export default function Home() {
                     alt="A Sejarah past-paper question with multiple-choice answers in Try Lah"
                     width={738}
                     height={1600}
-                    sizes="(max-width: 600px) 42vw, (max-width: 900px) 30vw, 260px"
+                    unoptimized
                     className="product-screen"
                   />
                 </div>
