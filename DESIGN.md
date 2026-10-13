@@ -21,7 +21,8 @@ The page always uses light mode, including when the operating system prefers dar
 ## Layout
 
 - Center content in an 80rem frame with fluid gutters.
-- Use the text-only Nolan wordmark in both header and footer; retain the branded `favicon.ico`.
+- Use the text-only Nolan wordmark in both header and footer. Standalone logo assets in `public/brand/` use pure black and white, with transparent versions of both letter colours; retain Manrope ExtraBold (800) and -0.035em tracking.
+- The favicon uses the white wordmark in a black circle. Keep Apple touch and maskable app icons opaque and square so platforms can apply their own shapes. Next.js metadata files in `src/app/` register the favicon, SVG icon, Apple icon, and web manifest.
 - Keep the hero compact so the Try Lah showcase begins within the desktop viewport.
 - Show the two existing Try Lah screenshots inside licensed iPhone 18 Pro frames. Asset provenance is in `public/work/SOURCES.md`.
 - Stack main sections on mobile while keeping navigation visible and the product screens side by side.
