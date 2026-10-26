@@ -6,7 +6,7 @@ import Image from "next/image";
 
 type CopyState = "idle" | "copied" | "error";
 
-const email = "shaoxuan@nolan.my";
+const email = "sam@nolan.my";
 const services = [
   ["Custom software", "Tools and systems shaped around the way your business works."],
   ["Web applications", "Fast, intuitive experiences that work beautifully on every screen."],
